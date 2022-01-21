@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3 class="mt-5 mb-5 text-center">Добавить новый пост</h3>
+<div class="d-flex flex-wrap justify-content-center">
+    <form action="#" style="width: 500px;" method="post" enctype="multipart/form-data" class="js-form">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="title" name="title" required>
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea placeholder="Description" class="form-control" id="message" name="message" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="author" class="form-label">Author</label>
+            <input type="text" class="form-control" id="author" name="author" required>
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="fileAdd">Add image</span>
+            </div>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="image" name="post_image" aria-describedby="fileAdd">
+                <label class="custom-file-label" for="image">Choose file</label>
+            </div>
+        </div>
+        <div class="input-group mb-3 js-tags-section">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="tags">Add tags</span>
+            </div>
+            <div class="input-group-append js-tag" style="margin-right: 200px">
+                <button class="btn btn-outline-secondary js-tag-btn" type="button">+</button>
+            </div>
+        </div>
+        <div class="input-group mb-3 js-comments-section">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="tags">Add comments</span>
+            </div>
+            <div class="input-group-append js-comment" style="margin-right: 200px">
+                <button class="btn btn-outline-secondary js-comment-btn" type="button">+</button>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-3 mb-5" formmethod="post">Submit</button>
+    </form>
+</div>
+{% endblock %}
